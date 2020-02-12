@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
+#include <time.h>
 #include "scene.h"
 
 int main(int argc, char *argv[])
 {
+	srand(time(NULL));
 	sf::RenderWindow window(sf::VideoMode(650, 650), "Snake");
 	sf::Event event;
 	Scene scene;

@@ -1,5 +1,9 @@
 #include "cube.h"
-
+Cube::Cube()
+{
+	m_sprite.setFillColor(sf::Color::Color(255,0,0));
+	m_sprite.setSize(sf::Vector2f(25, 25));
+}
 Cube::Cube(sf::Color color)
 {
 	m_sprite.setFillColor(color);
@@ -16,4 +20,8 @@ Cube::Cube(sf::Color color, sf::Vector2f position)
 void Cube::dessine(sf::RenderWindow &window)
 {
 	window.draw(m_sprite);
+}
+sf::RectangleShape *Cube::getSprite()
+{
+	return &m_sprite;
 }
