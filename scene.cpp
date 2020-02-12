@@ -64,7 +64,7 @@ void Scene::dessine(sf::RenderWindow &window)
 	else if(activity == GAME)
 	{
 		m_game.dessiner(window);
-		if(m_movegame.getElapsedTime().asMilliseconds() >= 100)
+		if(m_movegame.getElapsedTime().asMilliseconds() >= 90)
 		{
 			m_game.move();
 			m_movegame.restart();
