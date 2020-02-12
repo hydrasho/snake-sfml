@@ -10,6 +10,7 @@ Game::Game()
 	m_gameover = false;
 	arrow = LEFT;
 	m_tailleSerpent = 5;
+	
 	//serpent
 	int a = 275;
 	m_tabSerpent[0] = new Cube(sf::Color::Color(0,100,0), sf::Vector2f(a, 400));

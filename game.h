@@ -39,5 +39,4 @@ class Game{
 		sf::Font Font_Answer;
 		sf::Text m_scoreGraphique;
 };
-
 #endif
