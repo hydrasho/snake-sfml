@@ -6,7 +6,7 @@ Game::Game()
 	m_scoreGraphique.setFont(Font_Answer);
 	m_scoreGraphique.setString("Score: 0");
 	m_scoreGraphique.setPosition(500,580);
-	m_scoreGraphique.setCharacterSize(25);
+	m_scoreGraphique.setCharacterSize(35);
 	m_score = 0;
 	m_gameover = false;
 	arrow = LEFT;
@@ -27,7 +27,7 @@ Game::Game()
 void Game::restart()
 {
 	m_scoreGraphique.setPosition(500,580);
-	m_scoreGraphique.setCharacterSize(25);
+	m_scoreGraphique.setCharacterSize(35);
 	m_score = 0;
 	m_scoreGraphique.setString("Score: 0");
 	m_gameover = false;
