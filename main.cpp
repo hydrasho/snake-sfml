@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	sf::Event event;
 	Scene scene;
 
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(120);
 	while(window.isOpen())
 	{
 		while(window.pollEvent(event))

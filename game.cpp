@@ -53,6 +53,7 @@ void Game::dessiner(sf::RenderWindow &window)
 }
 int Game::isCollized()
 {
+	sf::Vector2f positionofsnake;
 	if(m_tabSerpent[0]->getSprite()->getGlobalBounds().intersects(m_pomme.getSprite()->getGlobalBounds()))
 	{
 		this->onEatPomme();
@@ -64,6 +65,12 @@ int Game::isCollized()
 		{
 			this->perdu();
 			return 1;//serpent manger
+		}
+		positionofsnake = m_tabSerpent[0]->getSprite()->getPosition();
+		if(positionofsnake.x <= 0 || positionofsnake.x >= 625 || positionofsnake.y >= 625 || positionofsnake.y <= 0)
+		{
+			this->perdu();
+			return 1;//mur manger
 		}
 	}
 	return 0;//rien du tout
