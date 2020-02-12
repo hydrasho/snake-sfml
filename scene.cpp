@@ -37,7 +37,7 @@ Scene::Scene()
 	{
 		tab[i+26*3] = new Cube(sf::Color::Color(100,100,100), sf::Vector2f(x, y));
 		y-=25;
-}
+	}
 }
 
 void Scene::dessine(sf::RenderWindow &window)
@@ -64,7 +64,7 @@ void Scene::dessine(sf::RenderWindow &window)
 	else if(activity == GAME)
 	{
 		m_game.dessiner(window);
-		if(m_movegame.getElapsedTime().asMilliseconds() >=150)
+		if(m_movegame.getElapsedTime().asMilliseconds() >= 100)
 		{
 			m_game.move();
 			m_movegame.restart();
@@ -96,21 +96,24 @@ void Scene::event(sf::Event event, sf::RenderWindow &window)
 	}
 	else if (activity == GAME)
 	{
-		if(event.key.code == sf::Keyboard::Up)
+		if(event.type == sf::Event::KeyPressed)
 		{
-			m_game.onUp();
-		}
-		if(event.key.code == sf::Keyboard::Right)
-		{
-			m_game.onRight();
-		}
-		if(event.key.code == sf::Keyboard::Left)
-		{
-			m_game.onLeft();
-		}
-		if(event.key.code == sf::Keyboard::Down)
-		{
-			m_game.onDown();
+			if(event.key.code == sf::Keyboard::Up)
+			{
+				m_game.onUp();
+			}
+			if(event.key.code == sf::Keyboard::Right)
+			{
+				m_game.onRight();
+			}
+			if(event.key.code == sf::Keyboard::Left)
+			{
+				m_game.onLeft();
+			}
+			if(event.key.code == sf::Keyboard::Down)
+			{
+				m_game.onDown();
+			}
 		}
 	}
 	else if(activity == PAUSE)
