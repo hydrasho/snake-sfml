@@ -2,6 +2,10 @@
 
 Game::Game()
 {
+	Font_Answer.loadFromFile("font/Answer.ttf");
+	m_scoreGraphique.setFont(Font_Answer);
+	m_scoreGraphique.setString("Score: 0");
+	m_scoreGraphique.setPosition(500,580);
 	m_score = 0;
 	m_gameover = false;
 	arrow = LEFT;
@@ -21,6 +25,7 @@ Game::Game()
 void Game::restart()
 {
 	m_score = 0;
+	m_scoreGraphique.setString("Score: 0");
 	m_gameover = false;
 	arrow = LEFT;
 	m_tailleSerpent = 5;
@@ -43,6 +48,7 @@ void Game::dessiner(sf::RenderWindow &window)
 	{
 		m_tabSerpent[i]->dessine(window);
 	}
+	window.draw(m_scoreGraphique);
 }
 int Game::isCollized()
 {
@@ -93,6 +99,8 @@ void Game::onEatPomme()
 {
 	m_pomme.getSprite()->setPosition(     (rand()%24+1)*25, (rand()%24+1)*25  );
 	m_score++;
+	char str[] = "Score: ";
+	m_scoreGraphique.setString(ft_strcat(str, ft_itoa(m_score)));
 	printf("NICE\n");
 	m_tailleSerpent++;
 	m_tabSerpent[m_tailleSerpent-1] = new Cube(sf::Color::Color(0,255,0), m_tabSerpent[m_tailleSerpent-2]->getSprite()->getPosition());

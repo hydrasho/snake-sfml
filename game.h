@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include <stdio.h>
+#include "utils.h"
 #include "cube.h"
 
 enum e_arrow{
@@ -35,6 +36,8 @@ class Game{
 		e_arrow arrow;
 		int m_score;
 		bool m_gameover;
+		sf::Font Font_Answer;
+		sf::Text m_scoreGraphique;
 };
 
 #endif
