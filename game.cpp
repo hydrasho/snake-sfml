@@ -48,10 +48,11 @@ void Game::restart()
 void Game::dessiner(sf::RenderWindow &window)
 {
 	m_pomme.dessine(window);
-	for(int i=0; i < m_tailleSerpent;i++)
+	for(int i=1; i < m_tailleSerpent;i++)
 	{
 		m_tabSerpent[i]->dessine(window);
 	}
+	m_tabSerpent[0]->dessine(window);
 	window.draw(m_scoreGraphique);
 }
 int Game::isCollized()
