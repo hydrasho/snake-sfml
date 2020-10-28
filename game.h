@@ -30,7 +30,7 @@ class Game{
 		void onEatPomme();
 		void perdu();
 	private:
-		int m_tailleSerpent;
+		unsigned int m_tailleSerpent;
 		Cube *m_tabSerpent[150];
 		Cube m_pomme;
 		e_arrow arrow;

@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		{
 			scene.event(event, window);//on envoie les events a la scene
 		}
-		window.clear(sf::Color::Color(200,150,0));
+		window.clear(sf::Color(200,150,0));
 		scene.dessine(window);//la scene se dessine
 		window.display();
 	}

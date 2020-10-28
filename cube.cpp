@@ -1,7 +1,7 @@
 #include "cube.h"
 Cube::Cube()
 {
-	m_sprite.setFillColor(sf::Color::Color(255,0,0));
+	m_sprite.setFillColor(sf::Color(255,0,0));
 	m_sprite.setSize(sf::Vector2f(25, 25));
 }
 Cube::Cube(sf::Color color)

@@ -17,25 +17,25 @@ Scene::Scene()
 	int x = 0;
 	for(int i = 0; i < 26;i++)
 	{
-		tab[i] = new Cube(sf::Color::Color(100,100,100), sf::Vector2f(x, y));
+		tab[i] = new Cube(sf::Color(100,100,100), sf::Vector2f(x, y));
 		x+=25;
 	}
 	x = 0;
 	for(int i = 0; i < 26;i++)
 	{
-		tab[i+26] = new Cube(sf::Color::Color(100,100,100), sf::Vector2f(x, y));
+		tab[i+26] = new Cube(sf::Color(100,100,100), sf::Vector2f(x, y));
 		y+=25;
 	}
 	y = y - 25;
 	for(int i = 0; i < 26;i++)
 	{
-		tab[i+26*2] = new Cube(sf::Color::Color(100,100,100), sf::Vector2f(x, y));
+		tab[i+26*2] = new Cube(sf::Color(100,100,100), sf::Vector2f(x, y));
 		x+=25;
 	}
 	x-=25;
 	for(int i = 0; i < 26;i++)
 	{
-		tab[i+26*3] = new Cube(sf::Color::Color(100,100,100), sf::Vector2f(x, y));
+		tab[i+26*3] = new Cube(sf::Color(100,100,100), sf::Vector2f(x, y));
 		y-=25;
 	}
 }

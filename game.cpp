@@ -14,11 +14,11 @@ Game::Game()
 	
 	//serpent
 	int a = 275;
-	m_tabSerpent[0] = new Cube(sf::Color::Color(0,100,0), sf::Vector2f(a, 400));
+	m_tabSerpent[0] = new Cube(sf::Color(0,100,0), sf::Vector2f(a, 400));
 	a+=25;
 	for(int i=1; i < m_tailleSerpent;i++)
 	{
-		m_tabSerpent[i] = new Cube(sf::Color::Color(0,255,0), sf::Vector2f(a, 400));
+		m_tabSerpent[i] = new Cube(sf::Color(0,255,0), sf::Vector2f(a, 400));
 		a = a + 25;
 	}
 	//pomme
@@ -35,11 +35,11 @@ void Game::restart()
 	m_tailleSerpent = 5;
 	//serpent
 	int a = 275;
-	m_tabSerpent[0] = new Cube(sf::Color::Color(0,100,0), sf::Vector2f(a, 400));
+	m_tabSerpent[0] = new Cube(sf::Color(0,100,0), sf::Vector2f(a, 400));
 	a+=25;
 	for(int i=1; i < m_tailleSerpent;i++)
 	{
-		m_tabSerpent[i] = new Cube(sf::Color::Color(0,255,0), sf::Vector2f(a, 400));
+		m_tabSerpent[i] = new Cube(sf::Color(0,255,0), sf::Vector2f(a, 400));
 		a = a + 25;
 	}
 	//pomme
@@ -117,7 +117,7 @@ void Game::onEatPomme()
 	m_scoreGraphique.setString(ft_strcat(str, ft_itoa(m_score)));
 	printf("NICE\n");
 	m_tailleSerpent++;
-	m_tabSerpent[m_tailleSerpent-1] = new Cube(sf::Color::Color(0,255,0), m_tabSerpent[m_tailleSerpent-2]->getSprite()->getPosition());
+	m_tabSerpent[m_tailleSerpent-1] = new Cube(sf::Color(0,255,0), m_tabSerpent[m_tailleSerpent-2]->getSprite()->getPosition());
 	
 }
 void Game::onUp()
